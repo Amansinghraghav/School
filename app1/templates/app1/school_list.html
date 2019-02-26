@@ -1,0 +1,10 @@
+{% extends 'app1/base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<h1>Here is School List</h1>
+<ol>
+  {% for school in schools%}
+  <li><h3><a href="{% url 'app1:school_details' school.id %}">{{school.name}}</a></li></h3>
+  {% endfor%}
+</ol>
+{% endblock %}

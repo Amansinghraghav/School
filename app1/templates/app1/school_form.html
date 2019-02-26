@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Create</title>
+  </head>
+  <body background ={% static 'images/b.jpg'%}>
+    <h1>
+      {% if not form.instance.pk %}
+      Create School
+      {% else %}
+      Update School
+      {% endif %}
+    </h1>
+    <form method="post">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input type="submit" name="" value="submit">
+    </form>
+  </body>
+</html>

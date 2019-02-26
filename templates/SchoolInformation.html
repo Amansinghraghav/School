@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block body_block %}
+<h2>Here You can see School information</h2>
+<div class="">
+  <a href="{% url 'app1:school_list'%}">School List</a>
+  <a href="{% url 'app1:school_create'%}">School Create</a>
+</div>
+<br>
+{% endblock %}

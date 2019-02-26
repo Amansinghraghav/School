@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{% load staticfiles %}
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+  </head>
+  <body background={% static 'images/a.jpg'%}>
+    <h2>Welcome In Your Django Website </h2>
+    <a href="{% url 'index' %}">Home</a>
+    <a href="{% url 'admin:index'%}">Admin</a>
+    <a href="{% url 'school'%}">School</a>
+    <a href="{% url 'student'%}">Student</a>
+    <div class="">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+  </body>
+</html>

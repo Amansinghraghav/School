@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Information</title>
+  </head>
+  <body background={% static 'images/c.jpg'%}>
+    <h1>The Information of {{student.name}}</h1>
+    <p>Student Name : {{student.name}}</p>
+    <p>Student Age : {{student.age}}</p>
+    <p>School  : {{student.school}}</p>
+    <br><br>
+    <div class="">
+      <a href="{% url 'app1:student_update' pk=student.pk %}">Update</a><br>
+      <a href="{% url 'app1:student_delete' pk=student.pk %}">Delete</a><br>
+    </div>
+  </body>
+</html>
